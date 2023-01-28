@@ -1,0 +1,18 @@
+<div class="rates-form" [formGroup]="rateFrom">
+  <div class="inputs">
+    <input formControlName="selectedDate" type="date" (ngModelChange)="onSelectedDate()">
+    <select formControlName="selectedCurrency" (ngModelChange)="onSelectedCurrency()">
+      <option *ngFor="let cur of supportedCurrencies" [value]="cur">{{cur}}</option>
+    </select>
+  </div>
+  <div *ngIf="rate && selectedDate.valid && !requestError" class="result">
+    <div>1 {{selectedCurrency.value}} equal to {{rate}} Czech crowns
+    </div>
+  </div>
+  <div class="errors">
+    <div *ngIf="!selectedDate.valid && selectedDate.dirty && selectedDate.touched">
+      Date can't be in future!
+    </div>
+    <div *ngIf="requestError">{{requestError}}</div>
+  </div>
+</div>

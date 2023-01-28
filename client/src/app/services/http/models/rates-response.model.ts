@@ -1,0 +1,36 @@
+export interface ExchangeRateResponse {
+  date: string;
+  aud: number;
+  bgn: number;
+  brl: number;
+  cad: number;
+  chf: number;
+  cny: number;
+  dkk: number;
+  eur: number;
+  gbp: number;
+  hkd: number;
+  huf: number;
+  idr: number;
+  ils: number;
+  inr: number;
+  isk: number;
+  jpy: number;
+  krw: number;
+  mxn: number;
+  myr: number;
+  nok: number;
+  nzd: number;
+  php: number;
+  pln: number;
+  ron: number;
+  rub: number;
+  sek: number;
+  sgd: number;
+  thb: number;
+  try: number;
+  usd: number;
+  xdr: number;
+  zar: number;
+  hrk: number;
+}

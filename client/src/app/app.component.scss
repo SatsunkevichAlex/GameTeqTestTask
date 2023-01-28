@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .rates-form {
+    width: 400px;
+    height: 150px;
+    background-color: lightblue;
+    border-radius: 30px;
+    border: 1px solid lightblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    .inputs {
+      gap: 2%;
+      display: flex;
+      justify-content: center;
+
+      input,
+      select {
+        padding: 2%;
+        border-radius: 10px;
+      }
+    }
+
+    .result,
+    .errors {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .errors {
+      color: red;
+    }
+  }
+}
