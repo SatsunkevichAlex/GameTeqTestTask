@@ -11,7 +11,7 @@
   </div>
   <div class="errors">
     <div *ngIf="!selectedDate.valid && selectedDate.dirty && selectedDate.touched">
-      Date can't be in future!
+      Requested date can't be in future!
     </div>
     <div *ngIf="requestError">{{requestError}}</div>
   </div>

@@ -24,7 +24,7 @@ namespace Services
             var rates = _repo.GetRatesList();
             if (rates.All(it => it.Date < date))
             {
-                throw new ArgumentException("Requested date in future");
+                throw new ArgumentException("Requested date not ready yet.");
             }
             var rate = await _repo.GetRateAsync(date) ?? HanleDayOff(rates, date);
             var mapped = _mapper.Map<ExchangeRates>(rate);
@@ -41,7 +41,7 @@ namespace Services
             }
             if (result == null)
             {
-                throw new ArgumentException("Requested date to far in past");
+                throw new ArgumentException("Requested date to far in past.");
             }
             return result;
         }

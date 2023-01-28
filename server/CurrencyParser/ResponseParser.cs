@@ -25,8 +25,6 @@ namespace CurrencyParser
         private CurrencyRow ParseRow(string[] dataRow, string row)
         {
             var rowValues = row.Split(valueSeparator);
-
-            var provider = CultureInfo.InvariantCulture.DateTimeFormat;
             var date = ParseDate(rowValues[0]);
 
             var currencyRow = new CurrencyRow();
@@ -53,7 +51,7 @@ namespace CurrencyParser
             return currencyRow;
         }
 
-        private DateTimeOffset ParseDate(string date)
+        private static DateTimeOffset ParseDate(string date)
         {
             var provider = CultureInfo.InvariantCulture.DateTimeFormat;
             var result = DateTimeOffset.ParseExact(
